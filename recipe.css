@@ -1,0 +1,185 @@
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./Montserrat-Regular.otf);
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./Montserrat-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./Montserrat-SemiBold.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: 'Montserrat';
+  src: url(./Montserrat-Italic.otf);
+  font-style: italic;
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url(./PlayfairDisplay-Regular.otf);
+}
+
+@font-face {
+  font-family: "Playfair Display";
+  src: url(./PlayfairDisplay-Bold.otf);
+  font-weight: bold;
+}
+
+h1 {
+  font-size: max(3vw, 24px);
+  margin-bottom: 1%;
+}
+
+h1, h2, h3 {
+  font-family: "Playfair Display";
+}
+
+body {
+  margin-left: 8px;
+  margin-right: 8px;
+  font-family: Montserrat;
+}
+
+#food {
+  width: 100%;
+}
+
+#info {
+  display: flex;
+  flex-wrap: wrap;
+  /* padding: 0.8em; */
+  justify-content: space-between;
+}
+
+#info > div {
+  font-size: clamp(10px, 0.9em, 1.3em);
+}
+
+#info > div:first-child {
+  flex: 1 100%;
+}
+
+#info > div:not(:first-child) {
+  flex: 1 0 0;
+}
+
+.serving {
+  margin-top: 0.3em;
+  filter: invert(58%) sepia(91%) saturate(572%) hue-rotate(357deg) brightness(98%) contrast(108%);
+  margin-left: 0.8em;
+  width: 2.7rem;
+  float: left;
+}
+
+.clock {
+  filter: invert(31%) sepia(21%) saturate(0%) hue-rotate(203deg) brightness(94%) contrast(95%);
+  width: 1.5rem;
+  margin-top: 0.6em;
+  margin-left: 0.8em;
+  margin-right: 0.8em;
+  float: left;
+}
+
+#six-dots {
+  margin-top: 0.3em;
+  margin-right: 10px;
+  float: left;
+  height: 100%;
+}
+
+#six-dots + p {
+  margin-top: 0;
+  margin-left: 1%;
+  margin-bottom: 2%;
+  overflow: hidden;
+  font-family: Montserrat;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+small {
+  color: gray;
+  font-weight: 600;
+  font-size: 60%;
+}
+
+h3 {
+  font-weight: normal;
+  font-style: italic;
+}
+
+ol {
+  counter-reset: recipe-counter;
+  list-style: none;
+  padding-left: 40px;
+}
+
+ol li {
+  margin-bottom: 3rem;
+  counter-increment: recipe-counter;
+  position: relative;
+}
+
+
+ol li::before {
+  content: counter(recipe-counter);
+  font-size: 1.5rem;
+  font-weight: bold;
+  font-family: "Playfair Display";
+  position: absolute;
+  --size: 28px;
+  left: calc(-1 * var(--size) - 10px);
+  line-height: var(--size);
+  width: var(--size);
+  height: var(--size);
+  top: 0;
+  background: orange;
+  border-radius: 12%;
+  color: white;
+  text-align: center;
+  padding-bottom: 4px;
+}
+
+@media screen and (min-width: 40rem) {
+  body {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  #six-dots + p {
+    width: 50%;
+  }
+
+  #info {
+    float: right;
+    /*
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    */
+    height: 15em;
+    width: 12em;
+    border-radius: 4%;
+    box-shadow: 0 0 2px 2px #afafaf;
+    flex-direction: column;
+  }
+
+  #info > div {
+    height: 54px;
+  }
+
+  #info div:first-child {
+    flex: 1 0 0;
+  }
+
+  #info ~ * {
+    width: 60%;
+  }
+}
