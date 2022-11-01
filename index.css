@@ -1,51 +1,20 @@
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url(./Montserrat-Regular.otf);
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url(./Montserrat-Bold.otf);
-  font-weight: bold;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url(./Montserrat-SemiBold.otf);
-  font-weight: 600;
-}
-
-@font-face {
-  font-family: 'Montserrat';
-  src: url(./Montserrat-Italic.otf);
-  font-style: italic;
-}
-
-@font-face {
-  font-family: "Playfair Display";
-  src: url(./PlayfairDisplay-Regular.otf);
-}
-
-@font-face {
-  font-family: "Playfair Display";
-  src: url(./PlayfairDisplay-Bold.otf);
-  font-weight: bold;
-}
-
 h1 {
-  font-size: max(3vw, 24px);
+  font-size: clamp(1.5rem, 2.25vw + 1rem, 3rem);
   margin-bottom: 1%;
 }
 
 h1, h2, h3 {
-  font-family: "Playfair Display";
+  font-family: "Playfair Display", serif;
+}
+
+h3 {
+  font-weight: normal;
 }
 
 body {
   margin-left: 8px;
   margin-right: 8px;
-  font-family: Montserrat;
+  font-family: Montserrat, sans-serif;
 }
 
 #food {
@@ -55,7 +24,6 @@ body {
 #info {
   display: flex;
   flex-wrap: wrap;
-  /* padding: 0.8em; */
   justify-content: space-between;
 }
 
@@ -65,6 +33,10 @@ body {
 
 #info > div:first-child {
   flex: 1 100%;
+}
+
+.amount {
+  font-size: clamp(0.625rem, 0.375vw + 0.5625rem, 0.875rem);
 }
 
 #info > div:not(:first-child) {
@@ -105,10 +77,10 @@ body {
   font-size: 0.8em;
 }
 
-small {
+.field {
   color: gray;
   font-weight: 600;
-  font-size: 60%;
+  font-size: clamp(0.5rem, 0.18vw + 0.45rem, 0.625rem);
 }
 
 h3 {
@@ -126,6 +98,10 @@ ol li {
   margin-bottom: 3rem;
   counter-increment: recipe-counter;
   position: relative;
+}
+
+label {
+  font-size: clamp(0.875rem, 0.19vw + 0.8rem, 1rem);
 }
 
 
@@ -148,10 +124,17 @@ ol li::before {
   padding-bottom: 4px;
 }
 
-@media screen and (min-width: 40rem) {
+footer {
+  margin-top: 8em;
+  margin-bottom: 4em;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
   body {
-    margin-left: 6%;
-    margin-right: 6%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 67%;
   }
 
   #six-dots + p {
@@ -160,19 +143,17 @@ ol li::before {
 
   #info {
     float: right;
-    /*
-    padding-top: 1.5em;
-    padding-bottom: 1.5em;
-    */
-    height: 15em;
-    width: 12em;
+    height: 240px;
+    width: 192px;
     border-radius: 4%;
+    padding-top: 1.5em;
+    padding-bottom: 1.2em;
     box-shadow: 0 0 2px 2px #afafaf;
-    flex-direction: column;
+    flex-flow: column wrap;
   }
 
   #info > div {
-    height: 54px;
+    height: 48px;
   }
 
   #info div:first-child {
