@@ -8,7 +8,7 @@
 
 <div align="center">
   <h3>
-    <a href="https://coldfix.dev/dev-challenges/recipe-page/recipe.html">
+    <a href="https://unrivaled-cactus-e52919.netlify.app/">
       Demo
     </a>
     <span> | </span>
@@ -37,12 +37,12 @@
 
 - Where can I see your demo?
 
-Right [here](https://coldfix.dev/dev-challenges/recipe-page/recipe.html).
+Right [here](https://unrivaled-cactus-e52919.netlify.app/).
 
 - What was your experience?
 
 I thought it was difficult since I had to create a clock svg and a knife
-and spoon svg. 
+and spoon svg.
 
 - What have you learned/improved?
 
@@ -71,6 +71,6 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 ## Contact
 
-- Website [coldfix.dev](https://coldfix.dev)
-- GitHub [@dXu23-username](https://github.com/dXu23)
+- [Website](https://coldfix.dev)
+- [GitHub](https://github.com/dXu23)
 
