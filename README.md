@@ -71,6 +71,6 @@ This application/site was created as a submission to a [DevChallenges](https://d
 
 ## Contact
 
-- [Website](https://coldfix.dev)
+- [Website](https://rad-sunshine-871fb5.netlify.app/)
 - [GitHub](https://github.com/dXu23)
 
